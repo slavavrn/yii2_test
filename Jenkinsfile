@@ -1,10 +1,10 @@
 pipeline {
-    agent { docker { image 'python:latest' } }
+    agent { dockerfile true }
 
     stages {
         stage('Подготовка') {
             steps {
-                sh "python --version"
+                sh "php -v"
             }
         }
         stage('Сборка') {
