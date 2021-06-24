@@ -2,19 +2,9 @@ pipeline {
     agent { dockerfile true }
 
     stages {
-        stage('Подготовка') {
+        stage('Testing') {
             steps {
-                sh "php -v"
-            }
-        }
-        stage('Сборка') {
-            steps {
-                echo 'Выполняем команды для сборки'
-            }
-        }
-        stage('Тестирование') {
-            steps {
-                echo 'Тестируем нашу сборку'
+                echo 'Builded container test'
             }
         }
         stage('Развертывание') {
