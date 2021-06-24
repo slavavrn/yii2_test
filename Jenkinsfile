@@ -7,7 +7,7 @@ pipeline {
                 echo 'Builded container test'
             }
         }
-        stage('Развертывание') {
+        stage('Delivery') {
             steps {
                 echo 'Переносим код в рабочую среду или создаем артефакт'
             }
